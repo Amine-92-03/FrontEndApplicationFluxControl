@@ -12,7 +12,10 @@ import ganttConfigStamb from './Models/ganttStambiaOptions.js'
 // import ganttConfigGrpdStambia from './Models/ganttOptionsStambiaGrpd.js' 
 
 //**********mettre valeur date aujourd'hui************************//
-document.getElementById("datePickerJ").value = getTodayTime();
+
+document.getElementById("datePickerJ").value = getTodayTime(0);
+document.getElementById("datePickerJ").max = getTodayTime(0);
+document.getElementById("datePickerJ_1").max = getTodayTime(-1);
 
 //************Bouton de Comp session***********************//
 
@@ -217,9 +220,9 @@ function ExcelDateToJSDate(serial) {
     return new Date(date_info.getFullYear(), date_info.getMonth(), date_info.getDate(), hours, minutes, seconds);
 }
 
-function getTodayTime(){
+function getTodayTime(i){
     let date = new Date();
-    let day = date.getDate();
+    let day = date.getDate()+i;
     let month = date.getMonth() + 1;
     let year = date.getFullYear();
     if (month < 10) month = "0" + month;

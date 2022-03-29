@@ -48,36 +48,30 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div id="btnDiv">
-         
-        <button type="button" id="sessionCompBtn" class="btn btn-outline-primary">Session</button>
-        <button type="button" id="stmbBtn" class="btn btn-outline-primary">Stambia</button>
-        <button type="button" id="birtBtn" class="btn btn-outline-primary">Birt</button>
-        <button type="button" id="qlkViewBtn" class="btn btn-outline-primary">Qlik View</button>
-        <button type="button" id="qlkSenseBtn" class="btn btn-outline-primary">Qlik Sense</button>
-        <button type="button" id="internBtn" class="btn btn-outline-primary">International</button>
-        <button type="button" id="finChaineBtn" class="btn btn-outline-primary">Fin Chaine</button>
         
-        <button type="button" id="refreshBtn" class="btn btn-outline-success">Reset Zoom</button>
-        <button type="button" class="btn btn-outline-info" onclick="window.location.reload()">refresh Page</button>
-        <!-- <button type="button" id="dateSubmitBtn" class="btn btn-outline-danger">Submit</button> -->
+    </header>
 
-
-        <!-- <button type="button" id="stambiaHrrchyBtn" class="btn btn-primary">Stambia Hrrchy</button> -->
-        <!-- <button type="button" id="sessionBtn" class="btn btn-primary">Session</button>
-        <button type="button" id="uprocBtn" class="btn btn-danger">Uproc</button>
-         -->
-         <div id="date">
-            <h5>Date J-1
-                <input type="date" id="datePickerJ_1">
-            </h5>
-            <h5>Date J 
-                <input type="date" id="datePickerJ" value = "">
-            </h5>
-        </div>      
-
+    <button type="button" id="sessionCompBtn" class="btn btn-outline-primary">Session</button>
+    <button type="button" id="stmbBtn" class="btn btn-outline-primary">Stambia</button>
+    <button type="button" id="birtBtn" class="btn btn-outline-primary">Birt</button>
+    <button type="button" id="qlkViewBtn" class="btn btn-outline-primary">Qlik View</button>
+    <button type="button" id="qlkSenseBtn" class="btn btn-outline-primary">Qlik Sense</button>
+    <button type="button" id="internBtn" class="btn btn-outline-primary">International</button>
+    <button type="button" id="finChaineBtn" class="btn btn-outline-primary">Fin Chaine</button>
+    
+    <button type="button" id="refreshBtn" class="btn btn-outline-success">Reset Zoom</button>
+    <button type="button" class="btn btn-outline-info" onclick="window.location.reload()">refresh Page</button>
+    <div class="col-md-6">
+        <label for="DateJ_1">Date début</label>
+        <input type="date" id="datePickerJ_1" data-provide="datepicker" min="2017-12-31" max="">             
     </div>
+    <div class="col-md-6">
+        <label for="DateJ_1">Date Fin</label>
+            <input type="date" id="datePickerJ" value = ""
+            min = "2017-12-31" max = "">
+    </div>
+    
+    
     <div class="chartWrapper">
         <div id="gantt-area" class="chartAreaWrapper">
             <canvas id="myChart" height="300" width="1200"></canvas>
